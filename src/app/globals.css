@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-red: #E1261C;
+  --color-red-deep: #7A1410;
+  --color-ember: #F2622E;
+  --color-navy: #1F2A4D;
+  --color-ink: #120F0E;
+  --color-paper: #FFFFFF;
+  --color-stone: #F4F1EC;
+
+  --breakpoint-xs: 360px;
+  --breakpoint-sm: 390px;
+  --breakpoint-md: 414px;
+  --breakpoint-tab: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1440px;
+  --breakpoint-3xl: 1920px;
+
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.1);
+  --shadow-strong: 0 16px 40px rgba(0, 0, 0, 0.2);
+  --shadow-glow-red: 0 0 20px rgba(225, 38, 28, 0.4);
+
+  --font-sans: var(--font-inter), Arial, Helvetica, sans-serif;
+  --font-heading: var(--font-archivo), Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: var(--color-paper);
+    --foreground: var(--color-ink);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .container-custom {
+    @apply w-full max-w-[1240px] mx-auto px-4 md:px-10;
+  }
+}
