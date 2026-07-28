@@ -2,6 +2,7 @@
 
 import React from "react";
 import { RevealOnScroll } from "@/components/animations/RevealOnScroll";
+import { WaterTestAnimation } from "@/components/animations/WaterTestAnimation";
 import { Check, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -46,6 +47,10 @@ export function Comparativo() {
               O mercado evoluiu. Entenda por que a engenharia de ponta está substituindo a ultrapassada manta asfáltica pelos sistemas líquidos de Poliuretano (PU) de alta performance.
             </p>
           </div>
+        </RevealOnScroll>
+
+        <RevealOnScroll delay={0.2}>
+          <WaterTestAnimation />
         </RevealOnScroll>
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr_1.3fr] gap-6 lg:gap-0 max-w-6xl mx-auto items-center">

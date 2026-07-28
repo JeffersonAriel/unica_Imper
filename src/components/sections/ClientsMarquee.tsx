@@ -40,7 +40,7 @@ const itemVariants = {
   visible: { 
     opacity: 1, 
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
+    transition: { duration: 0.6, ease: "easeOut" as const }
   },
 };
 
@@ -52,7 +52,7 @@ const abntLogoVariants = {
     rotate: 0,
     x: 0,
     transition: { 
-      type: "spring",
+      type: "spring" as const,
       stiffness: 100,
       damping: 15,
       duration: 0.8 
@@ -79,7 +79,7 @@ export function ClientsMarquee() {
         <motion.div 
           className="inline-flex items-center"
           animate={{ x: ["0%", "-50%"] }}
-          transition={{ duration: 40, ease: "linear", repeat: Infinity }}
+          transition={{ duration: 40, ease: "linear" as const, repeat: Infinity }}
         >
           {marqueeItems.map((client, i) => (
             <div 
