@@ -99,7 +99,7 @@ export function Portfolio() {
         {items.length > visibleCount && (
           <RevealOnScroll className="mt-12 flex justify-center">
             <Button 
-              variant="outline" 
+              variant="ghost" 
               onClick={() => setVisibleCount(prev => prev + 6)}
             >
               Ver mais obras
