@@ -1,10 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",
-  images: {
-    unoptimized: true,
-  },
+  // Configuração padrão do Next.js (suporta SSR e next start)
 };
 
 export default nextConfig;
