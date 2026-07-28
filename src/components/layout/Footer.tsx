@@ -82,12 +82,12 @@ export function Footer() {
               Gestão de Qualidade Certificada
             </span>
           </div>
-          <div className="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity cursor-default">
+          <a href="https://www.retaprene.com.br" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity cursor-pointer">
             <RetapreneLogo />
             <span className="text-[10px] uppercase text-paper/70 leading-tight w-[120px]">
               Aplicador Oficial Autorizado
             </span>
-          </div>
+          </a>
         </div>
 
         {/* Bottom */}

@@ -7,7 +7,7 @@ export function RetapreneLogo() {
 
   if (hasError) {
     return (
-      <span className="font-heading font-black text-[22px] text-red tracking-tighter">
+      <span className="font-heading font-black text-[24px] text-paper tracking-tighter">
         RETAPRENE
       </span>
     );
@@ -17,7 +17,7 @@ export function RetapreneLogo() {
     <img
       src="/logos/retaprene.png"
       alt="Logo Retaprene"
-      className="h-6 object-contain"
+      className="h-6 object-contain brightness-0 invert"
       onError={() => setHasError(true)}
     />
   );
