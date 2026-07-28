@@ -81,6 +81,12 @@ export function Footer() {
               Gestão de Qualidade Certificada
             </span>
           </div>
+          <div className="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity cursor-default">
+            <span className="font-heading font-black text-[22px] text-red tracking-tighter">RETAPRENE</span>
+            <span className="text-[10px] uppercase text-paper/70 leading-tight w-[120px]">
+              Aplicador Oficial Autorizado
+            </span>
+          </div>
         </div>
 
         {/* Bottom */}
