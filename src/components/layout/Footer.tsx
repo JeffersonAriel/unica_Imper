@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { RetapreneLogo } from "@/components/ui/RetapreneLogo";
 
 export function Footer() {
   return (
@@ -82,19 +83,7 @@ export function Footer() {
             </span>
           </div>
           <div className="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity cursor-default">
-            <img 
-              src="/logos/retaprene.png" 
-              alt="Logo Retaprene" 
-              className="h-6 object-contain"
-              onError={(e) => {
-                // Fallback to text if the image is missing
-                e.currentTarget.style.display = 'none';
-                e.currentTarget.nextElementSibling?.classList.remove('hidden');
-              }}
-            />
-            <span className="hidden font-heading font-black text-[22px] text-red tracking-tighter">
-              RETAPRENE
-            </span>
+            <RetapreneLogo />
             <span className="text-[10px] uppercase text-paper/70 leading-tight w-[120px]">
               Aplicador Oficial Autorizado
             </span>
