@@ -12,11 +12,11 @@ export function Footer() {
           <div>
             <Link href="/" className="flex items-center gap-3 mb-[18px]">
               <div className="relative h-[36px] w-[120px] flex items-center shrink-0 opacity-90 hover:opacity-100 transition-opacity">
-                <Image 
-                  src="/logo.png" 
-                  alt="Única Logo" 
+                <Image
+                  src="/logo.png"
+                  alt="Única Logo"
                   fill
-                  className="object-contain object-left brightness-0 invert" 
+                  className="object-contain object-left brightness-0 invert"
                 />
               </div>
             </Link>
@@ -63,28 +63,58 @@ export function Footer() {
         </div>
 
         {/* Credentials / Badges */}
-        <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-12 gap-y-6 pt-10 pb-6 border-b border-paper/15">
+        <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-8 lg:gap-x-10 gap-y-6 pt-10 pb-6 border-b border-paper/15">
           <div className="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity cursor-default">
             <span className="font-heading font-black text-[24px] text-paper tracking-tighter">CREA</span>
-            <span className="text-[10px] uppercase text-paper/70 leading-tight w-[120px]">
-              Conselho Regional de Engenharia
+            <span className="text-[10px] uppercase text-paper/70 leading-tight w-[130px]">
+              Conselho Regional de Engenharia e Agronomia
+            </span>
+          </div>
+          <div className="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity cursor-default">
+            <span className="font-heading font-black text-[24px] text-paper tracking-tighter">CONFEA</span>
+            <span className="text-[10px] uppercase text-paper/70 leading-tight w-[130px]">
+              Conselho Federal de Engenharia e Agronomia
+            </span>
+          </div>
+          <div className="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity cursor-default">
+            <span className="font-heading font-black text-[24px] text-paper tracking-tighter">CRT</span>
+            <span className="text-[10px] uppercase text-paper/70 leading-tight w-[130px]">
+              Conselho Regional dos Técnicos Industriais
+            </span>
+          </div>
+          <div className="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity cursor-default">
+            <span className="font-heading font-black text-[24px] text-paper tracking-tighter">CFT</span>
+            <span className="text-[10px] uppercase text-paper/70 leading-tight w-[130px]">
+              Conselho Federal dos Técnicos Industriais
+            </span>
+          </div>
+          <div className="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity cursor-default">
+            <span className="font-heading font-black text-[20px] md:text-[22px] text-paper tracking-tighter">IBAPE-SP</span>
+            <span className="text-[10px] uppercase text-paper/70 leading-tight w-[130px]">
+              Instituto Brasileiro de Avaliações e Perícias de Engenharia de São Paulo
+            </span>
+          </div>
+          <div className="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity cursor-default">
+            <span className="font-heading font-black text-[24px] text-paper tracking-tighter">INEC</span>
+            <span className="text-[10px] uppercase text-paper/70 leading-tight w-[130px]">
+              Instituto Nacional de Estudos da Construção
             </span>
           </div>
           <div className="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity cursor-default">
             <span className="font-heading font-black text-[24px] text-paper tracking-tighter">IBI</span>
-            <span className="text-[10px] uppercase text-paper/70 leading-tight w-[120px]">
-              Instituto Brasil. de Impermeabilização
+            <span className="text-[10px] uppercase text-paper/70 leading-tight w-[130px]">
+              Instituto Brasileiro de Impermeabilização
             </span>
           </div>
           <div className="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity cursor-default">
-            <span className="font-heading font-black text-[24px] text-paper tracking-tighter">ISO 9001</span>
-            <span className="text-[10px] uppercase text-paper/70 leading-tight w-[120px]">
+            <span className="font-heading font-black text-[22px] text-paper tracking-tighter">ISO 9001</span>
+            <span className="text-[10px] uppercase text-paper/70 leading-tight w-[130px]">
               Gestão de Qualidade Certificada
             </span>
           </div>
           <a href="https://www.retaprene.com.br" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity cursor-pointer">
             <RetapreneLogo />
-            <span className="text-[10px] uppercase text-paper/70 leading-tight w-[120px]">
+            <span className="text-[10px] uppercase text-paper/70 leading-tight w-[130px]">
               Aplicador Oficial Autorizado
             </span>
           </a>
@@ -93,24 +123,24 @@ export function Footer() {
         {/* Bottom */}
         <div className="flex flex-col lg:flex-row justify-between items-center pt-7 pb-4 text-[12px] text-paper/35 gap-4 text-center lg:text-left">
           <p>&copy; {new Date().getFullYear()} Única Impermeabilização. Todos os direitos reservados.</p>
-          
+
           <div className="flex flex-col md:flex-row items-center gap-2 md:gap-6">
             <p>
               Desenvolvido por <span className="text-paper/70 font-semibold">Jefferson Santos</span>
             </p>
             <div className="flex items-center gap-4 mt-2 md:mt-0">
-              <a 
-                href="https://www.linkedin.com/in/jefferson-ariel-santos/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://www.linkedin.com/in/jefferson-ariel-santos/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-paper transition-colors underline decoration-paper/20 underline-offset-4"
               >
                 LinkedIn
               </a>
-              <a 
-                href="https://wa.me/5511940112438?text=Ol%C3%A1%20vim%20do%20site%20da%20Unica%2C%20tenho%20duvidas." 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://wa.me/5511940112438?text=Ol%C3%A1%20vim%20do%20site%20da%20Unica%2C%20tenho%20duvidas."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-paper transition-colors underline decoration-paper/20 underline-offset-4"
               >
                 WhatsApp
