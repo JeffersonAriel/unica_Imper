@@ -1,26 +1,32 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useSyncExternalStore } from "react";
 import { Button } from "./Button";
 import Link from "next/link";
 
-export function ConsentBanner() {
-  const [isVisible, setIsVisible] = useState(false);
+function subscribe(callback: () => void) {
+  window.addEventListener("storage", callback);
+  return () => window.removeEventListener("storage", callback);
+}
 
-  useEffect(() => {
-    // Check if user already consented
-    const consent = localStorage.getItem("unica_lgpd_consent");
-    if (!consent) {
-      setIsVisible(true);
-    }
-  }, []);
+function getSnapshot() {
+  return localStorage.getItem("unica_lgpd_consent") === "true";
+}
+
+function getServerSnapshot() {
+  return true; // Don't show during SSR
+}
+
+export function ConsentBanner() {
+  const hasConsented = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+  const [dismissed, setDismissed] = useState(false);
 
   const handleAccept = () => {
     localStorage.setItem("unica_lgpd_consent", "true");
-    setIsVisible(false);
+    setDismissed(true);
   };
 
-  if (!isVisible) return null;
+  if (hasConsented || dismissed) return null;
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-[1000] bg-ink text-paper p-6 border-t border-line-invert shadow-[0_-10px_30px_rgba(0,0,0,0.2)]">

@@ -1,0 +1,9 @@
+---
+# Configuração para o "Git™ Version Control" do cPanel da HostGator.
+# Observação: Para sites Next.js, a forma recomendada e 100% automatizada é o GitHub Actions
+# (.github/workflows/deploy.yml), que compila o projeto no GitHub e envia os arquivos via FTP.
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/$USER/public_html/
+    - /bin/cp -R out/* $DEPLOYPATH
+

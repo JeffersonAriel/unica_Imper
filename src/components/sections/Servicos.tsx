@@ -33,7 +33,7 @@ export function Servicos() {
       .then(res => res.json())
       .then(data => {
         if (data && data.length > 0) {
-          const apiServicos = data.map((srv: any, idx: number) => {
+          const apiServicos = data.map((srv: { title: string; slug: string; image_path?: string | null }, idx: number) => {
             const fallbackGradient = defaultServicos[idx % defaultServicos.length]?.gradient || "from-[#3a3f4c] to-[#121620]";
             return {
               id: `0${idx + 1}`.slice(-2),

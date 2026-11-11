@@ -1,0 +1,55 @@
+name: Deploy Frontend para HostGator
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: 'deploy-hostgator'
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    name: Build & Deploy via FTP
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Clonar repositório
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Configurar Node.js (v20)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: 📦 Instalar dependências
+        run: npm ci
+
+      - name: 🏗️ Compilar site estático (Next.js Export)
+        run: npm run build
+        env:
+          NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL || 'https://unicaimper.com.br' }}
+          NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL || 'https://api.unicaimper.com.br' }}
+
+      - name: 🛡️ Garantir presença do .htaccess
+        run: |
+          if [ -f public/.htaccess ]; then
+            cp public/.htaccess out/.htaccess
+            echo ".htaccess copiado para pasta out/"
+          fi
+
+      - name: 🚀 Enviar arquivos para a HostGator (FTP/FTPS)
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER || secrets.HOSTGATOR_FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME || secrets.HOSTGATOR_FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD || secrets.HOSTGATOR_FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT || secrets.HOSTGATOR_FTP_PORT || 21 }}
+          protocol: ftp
+          local-dir: ./out/
+          server-dir: ${{ secrets.FTP_SERVER_DIR || secrets.HOSTGATOR_SERVER_DIR || './public_html/' }}
+          dangerous-clean-slate: false
+

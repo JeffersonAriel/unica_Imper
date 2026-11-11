@@ -38,7 +38,7 @@ export function Portfolio() {
       .then(res => res.json())
       .then(data => {
         if (data && data.length > 0) {
-          const apiItems = data.map((img: any, idx: number) => ({
+          const apiItems = data.map((img: { id: number | string; span?: string; image_path: string }, idx: number) => ({
             id: `api-${img.id}`,
             gradient: defaultItems[idx % defaultItems.length].gradient,
             span: img.span || defaultItems[idx % defaultItems.length].span,

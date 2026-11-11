@@ -38,7 +38,7 @@ export function QuoteWizard() {
   };
 
   const handleCepChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    let value = e.target.value.replace(/\D/g, "");
+    const value = e.target.value.replace(/\D/g, "");
     
     // Mask CEP
     let formattedCep = value;
