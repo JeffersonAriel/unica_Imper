@@ -1,7 +1,11 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home3/jeff3734/public_html
+    - export DEPLOYPATH=/home3/jeff3734/unicaimper.com.br
+    - export DEPLOYPATH_ALT=/home3/jeff3734/public_html
     - /bin/cp -rf out/. $DEPLOYPATH/
-    - /bin/cp out/index.html $DEPLOYPATH/index.html
     - /bin/cp out/.htaccess $DEPLOYPATH/.htaccess
+    - /bin/rm -f $DEPLOYPATH/default.html
+    - /bin/cp -rf out/. $DEPLOYPATH_ALT/
+    - /bin/cp out/.htaccess $DEPLOYPATH_ALT/.htaccess
+    - /bin/rm -f $DEPLOYPATH_ALT/default.html
