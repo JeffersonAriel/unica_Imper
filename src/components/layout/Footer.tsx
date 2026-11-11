@@ -56,7 +56,7 @@ export function Footer() {
             </h4>
             <ul className="flex flex-col gap-3">
               <li><a href="mailto:contato@unicaimper.com.br" className="text-[14px] transition-all duration-250 hover:text-paper hover:pl-1">contato@unicaimper.com.br</a></li>
-              <li><a href="tel:+5511999999999" className="text-[14px] transition-all duration-250 hover:text-paper hover:pl-1">(11) 99999-9999</a></li>
+              <li><a href="tel:+5511958252256" className="text-[14px] transition-all duration-250 hover:text-paper hover:pl-1">(11) 95825-2256</a></li>
               <li className="mt-2"><Link href="/politica-privacidade" className="text-[14px] transition-all duration-250 hover:text-paper hover:pl-1 text-red">Política de Privacidade</Link></li>
             </ul>
           </div>
@@ -138,7 +138,7 @@ export function Footer() {
                 LinkedIn
               </a>
               <a
-                href="https://wa.me/5511940112438?text=Ol%C3%A1%20vim%20do%20site%20da%20Unica%2C%20tenho%20duvidas."
+                href="https://wa.me/5511958252256?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20%C3%9Anica%20Impermeabiliza%C3%A7%C3%A3o%20e%20gostaria%20de%20um%20or%C3%A7amento."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-paper transition-colors underline decoration-paper/20 underline-offset-4"

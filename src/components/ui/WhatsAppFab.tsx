@@ -5,8 +5,8 @@ import { MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export function WhatsAppFab({ className }: { className?: string }) {
-  const whatsappNumber = "5511999999999"; // Default placeholder
-  const message = "Olá, gostaria de solicitar um orçamento.";
+  const whatsappNumber = "5511958252256";
+  const message = "Olá! Vim pelo site da Única Impermeabilização e gostaria de solicitar um orçamento.";
 
   return (
     <a
